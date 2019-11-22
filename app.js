@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // all routes related to /product:
 app.use('/products', product);
 
-let port = 1234;
+let port =  process.env.PORT || 1234;
 
 
 app.get('/', function(req, res) {
