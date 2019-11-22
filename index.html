@@ -8,7 +8,7 @@
 <body>
 
   <h3> Add Data to Mongo DB</h3>
-  <form action="https://crudappcloud.herokuapp.com/products/create" method="post">
+  <form action="/products/create" method="post">
      name:<br>
     <input type="text" name="name"><br>
      price:<br>
@@ -18,21 +18,21 @@
 
 
   <h3> Read Data  Mongo DB</h3>
-  <form action="http://127.0.0.1:1234/products/getdata" method="post">
+  <form action="/products/getdata" method="post">
      name:<br>
     <input type="text" name="requestprod"><br>
     <input type="submit" value="Submit to Mongo">
   </form>
 
   <h3> Delete Data from Mongo DB</h3>
-  <form action="http://127.0.0.1:1234/products/delete" method="post">
+  <form action="products/delete" method="post">
      name:<br>
     <input type="text" name="deleteprod"><br>
     <input type="submit" value="Submit Request">
   </form>
 
   <h3> Get all Data from Mongo DB</h3>
-  <form action="http://127.0.0.1:1234/products/getalldata" method="post">
+  <form action="/products/getalldata" method="post">
     <br>
     <input type="submit" value="Submit Request">
   </form>
