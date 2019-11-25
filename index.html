@@ -6,51 +6,84 @@
 </head>
 
 <body>
+<br>
+  <h3> Simple CRUD App</h3>
 
-  <h3> Add Data to Mongo DB</h3>
-  <form  enctype='application/json' action="/products/create" method="post">
-     name:<br>
+    <div class="float-right">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<br>
+  <h4> Add a customer to the database</h4>
+  <form enctype='application/json' action="/customers/create" method="post">
+    <div class="form-group">
+      Name<br>
     <input type="text" name="name"><br>
-    mobile:<br>
+    Mobile Number<br>
     <input type="number" name="mobile"><br>
     <h5>Residential Address</h5>
-    Address line 1:<br>
+    Address line 1<br>
     <input name='address0a' ><br>
-    City:<br>
+    City<br>
     <input name='address0b'>
     <br>
     <h5>Office Address</h5>
-    Address line 1:<br>
+    Address line 1<br>
     <input name='address1a'><br>
-    City:<br>
+    City<br>
     <input name='address1b'>
+    </div>
+
+    <input type="submit" value="Submit">
+  </form>
 
 <br>
-    <input type="submit" value="Submit to Mongo">
-  </form>
-
-
-  <h3> Read Data  Mongo DB</h3>
-  <form action="/products/getdata" method="post">
+  <h3> Search for a customer by name </h3>
+  <form action="/customers/getdata" method="post">
      name:<br>
     <input type="text" name="requestprod"><br>
-    <input type="submit" value="Submit to Mongo">
+    <input type="submit" value="Submit ">
   </form>
-
-  <h3> Delete Data from Mongo DB</h3>
-  <form action="products/delete" method="post">
+<br>
+  <h3> Delete customer </h3>
+  <form action="customers/delete" method="post">
      name:<br>
     <input type="text" name="deleteprod"><br>
     <input type="submit" value="Submit Request">
   </form>
 
-  <h3> Get all Data from Mongo DB</h3>
-  <form action="/products/getalldata" method="post">
+  <br>
+  <h3> Get all Customer Data from Mongo DB</h3>
+  <form action="/customers/getalldata" method="post">
     <br>
     <input type="submit" value="Submit Request">
   </form>
+  <br>
+  <br>
+  <h3> Update customer information in the database</h3>
+  <form  enctype='application/json' action="/customers/update" method="post">
+     Name<br>
+    <input type="text" name="name"><br>
+    Mobile Number<br>
+    <input type="number" name="mobile"><br>
+    <h5>Residential Address</h5>
+    Address line 1<br>
+    <input name='address0a' ><br>
+    City<br>
+    <input name='address0b'>
+    <br>
+    <h5>Office Address</h5>
+    Address line 1<br>
+    <input name='address1a'><br>
+    City<br>
+    <input name='address1b'>
 
-
+<br>
+<br>
+    <input type="submit" value="Submit">
+  </form>
+  <a href="https://www.linkedin.com/in/aditya-singh-verma/">presented by Aditya S. Verma</a> 
+</div>
 </body>
-
 </html>

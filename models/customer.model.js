@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let ProductSchema = new Schema({
+let customerSchema = new Schema({
     name: {type: String, required: true, max: 100},
     mobile: {type: Number, required: true},
     addresses: {
@@ -18,5 +18,7 @@ let ProductSchema = new Schema({
 });
 
 
-// Export the model
-module.exports = mongoose.model('Product', ProductSchema);
+
+
+
+module.exports = mongoose.model('Customer', customerSchema);

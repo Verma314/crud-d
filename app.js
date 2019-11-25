@@ -3,7 +3,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const product = require('./routes/product.route'); // Imports routes for the products
+const customer = require('./routes/customer.route'); // Imports routes for the customers
 const app = express();
 
 // Set up mongoose connection
@@ -19,8 +19,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// all routes related to /product:
-app.use('/products', product);
+// all routes related to /customer:
+app.use('/customers', customer);
 
 let port =  process.env.PORT || 1234;
 
