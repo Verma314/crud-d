@@ -8,11 +8,24 @@
 <body>
 
   <h3> Add Data to Mongo DB</h3>
-  <form action="/products/create" method="post">
+  <form  enctype='application/json' action="/products/create" method="post">
      name:<br>
     <input type="text" name="name"><br>
-     price:<br>
-    <input type="number" name="price"><br>
+    mobile:<br>
+    <input type="number" name="mobile"><br>
+    <h5>Residential Address</h5>
+    Address line 1:<br>
+    <input name='address0a' ><br>
+    City:<br>
+    <input name='address0b'>
+    <br>
+    <h5>Office Address</h5>
+    Address line 1:<br>
+    <input name='address1a'><br>
+    City:<br>
+    <input name='address1b'>
+
+<br>
     <input type="submit" value="Submit to Mongo">
   </form>
 
